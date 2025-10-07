@@ -128,7 +128,7 @@ COMMON = {
 for lang, entries in all_data.items():
     entries.update(COMMON.get(lang, COMMON["en"]))
 
-output_path = Path("web/i18n.json")
+output_path = Path("docs/i18n.json")
 output_path.parent.mkdir(parents=True, exist_ok=True)
 with output_path.open("w", encoding="utf-8") as fh:
     json.dump(all_data, fh, ensure_ascii=False, indent=2)
