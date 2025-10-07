@@ -1,6 +1,7 @@
 {
   "en": {
     "app_name": "JuggerStones+",
+    "title": "Jugger-Stones",
     "language": "@string/language_en",
     "language_en": "Language",
     "language_english": "@string/language_english_en",
@@ -73,6 +74,7 @@
     "common.cancel": "Cancel"
   },
   "de": {
+    "title": "Jugger-Stones",
     "language": "Sprache",
     "language_english": "Englisch",
     "language_french": "Französisch",
@@ -146,6 +148,7 @@
     "common.cancel": "Abbrechen"
   },
   "es": {
+    "title": "Jugger-Stones",
     "language": "Idioma",
     "language_english": "Ingles",
     "language_french": "Frances",
@@ -219,6 +222,7 @@
     "common.cancel": "Cancelar"
   },
   "fr": {
+    "title": "Jugger-Stones",
     "language": "Langue",
     "language_english": "Anglais",
     "language_french": "Français",
@@ -292,6 +296,7 @@
     "common.cancel": "Annuler"
   },
   "pt": {
+    "title": "Jugger-Stones",
     "language": "Língua",
     "language_english": "Inglês",
     "language_french": "Francês",
