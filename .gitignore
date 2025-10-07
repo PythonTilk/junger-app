@@ -34,3 +34,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# reverse engineering artifacts
+JuggerStones+_*.xapk
+/decompiled/
+/tools/
+/xapk/

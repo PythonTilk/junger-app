@@ -1,0 +1,352 @@
+:root {
+  --bg: #111;
+  --fg: #f5f5f5;
+  --accent: #ff9800;
+  --accent-2: #4caf50;
+  --team-bg: rgba(255, 255, 255, 0.08);
+  --team-border: rgba(255, 255, 255, 0.16);
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-family);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.app {
+  width: min(960px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.app__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+  text-align: center;
+}
+
+.app__title {
+  margin: 0;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.toolbar__button {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  background: var(--team-bg);
+  color: var(--fg);
+  border: 1px solid var(--team-border);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.toolbar__button:hover,
+.toolbar__button:focus-visible {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.app__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.teams {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.team {
+  background: var(--team-bg);
+  border: 1px solid var(--team-border);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.team__name {
+  font-size: clamp(1.1rem, 3.5vw, 1.6rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.team__points {
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  font-weight: 700;
+}
+
+.team__buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.team__button {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--fg);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.team__button:hover,
+.team__button:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.stones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.stones__button {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--fg);
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.stones__button:hover,
+.stones__button:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.stones__value {
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: 700;
+  min-width: 5rem;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.controls__button {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--fg);
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.controls__button:hover,
+.controls__button:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.controls__button.info {
+  font-size: 1.4rem;
+}
+
+.app__footer {
+  min-height: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.status {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  min-height: 1.5rem;
+}
+
+.dialog {
+  border: none;
+  border-radius: 1rem;
+  padding: 0;
+  background: #1f1f1f;
+  color: var(--fg);
+  width: min(480px, 90vw);
+}
+
+.dialog::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.dialog__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.dialog__form h2 {
+  margin: 0;
+}
+
+.dialog__section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dialog__section h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.dialog__form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.dialog__form input,
+.dialog__form select {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--fg);
+}
+
+.dialog__form input[type="color"] {
+  padding: 0;
+  height: 2.5rem;
+}
+
+.dialog__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.dialog__actions button {
+  padding: 0.5rem 1rem;
+  background: var(--team-bg);
+  color: var(--fg);
+  border: 1px solid var(--team-border);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.dialog__actions button[type="submit"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #111;
+}
+
+.dialog__actions button[type="submit"]:hover,
+.dialog__actions button[type="submit"]:focus-visible {
+  background: #ffb74d;
+}
+
+.settings__links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.settings__links a {
+  color: var(--accent-2);
+  text-decoration: none;
+}
+
+.settings__version {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  background: rgba(33, 150, 243, 0.9);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  pointer-events: none;
+  opacity: 0;
+  animation: toast-in 3s ease forwards;
+}
+
+@keyframes toast-in {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 0.5rem;
+  }
+  .toolbar__button {
+    flex: 1 1 45%;
+  }
+  .controls__button {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
